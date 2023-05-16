@@ -7,60 +7,63 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+# Description du projet
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Objectif
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Il sʼagit dʼun test de recrutement afin dʼintégrer lʼéquipe de Kaffein Agency en tant que
+développeur Back ou Fullstack.  
+Le client fictif utilise le CRM hubspot, et souhaite mettre à disposition de ses commerciaux une
+plateforme de visualisation des entreprises et contacts du CRM. 
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+-----------------
 
-## Learning Laravel
+## Création du projet
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Utilisation de __Composer__ pour la création de ce projet __Laravel__.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Commande : 
+`composer create-project --prefer-dist laravel/laravel name`
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+-----------------
 
-## Laravel Sponsors
+## Versions
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+* PHP 8.2.6
+* Composer 2.5.5
+* Laravel 10.10.1
+* Node 16.15.1
+* MariaDB 10.10.2
 
-### Premium Partners
+-----------------
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+## Commandes
 
-## Contributing
+Serveur Web __PHP__ : `php artisan serve`  
+Serveur __NPM__ en dev : `npm run dev`  
+Migration des données : `php artisan migrate`
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+-----------------
 
-## Code of Conduct
+## Base De Données
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Actuellement, il existe une seule BDD (tout en local bien-sûr) du nom de *entreprise_auth*.  
+Cette base va contenir les comptes permettant la connexion à l'application.
 
-## Security Vulnerabilities
+-----------------
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Authentification
 
-## License
+Pour gérer la partie d'authentification, j'utilise la librairie __UI__ de __Laravel__.  
+Lien [Github](https://github.com/laravel/ui).  
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+`composer require laravel/ui`
+
+Dans la cas d'utiliser de __VueJS__ pour le développement Front, on va utiliser les commandes suivantes pour intégrer l'authentification :
+* `php artisan ui vue`  
+* `php artisan ui vue --auth`  
+
+Ensuite, je vais installer la libraire avec __NodeJS__ :  
+`npm install`  
+Et ensuite je vais pouvoir lancer le serveur local :  
+`npm run dev`

@@ -59,9 +59,8 @@ Lien [Github](https://github.com/laravel/ui).
 
 `composer require laravel/ui`
 
-Dans la cas d'utiliser de __VueJS__ pour le développement Front, on va utiliser les commandes suivantes pour intégrer l'authentification :
-* `php artisan ui vue`  
-* `php artisan ui vue --auth`  
+Dans la cas d'utiliser de __VueJS__ pour le développement Front, on va utiliser la commande suivante pour intégrer l'authentification :  
+`php artisan ui vue --auth`  
 
 Ensuite, je vais installer la libraire avec __NodeJS__ :  
 `npm install`  
